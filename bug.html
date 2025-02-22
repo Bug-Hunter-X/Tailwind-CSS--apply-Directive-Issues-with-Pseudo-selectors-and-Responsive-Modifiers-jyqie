@@ -1,0 +1,13 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a class that contains a pseudo-selector like `:hover` or `:focus`. The `@apply` directive doesn't correctly handle these pseudo-selectors, resulting in the styles not being applied correctly.
+
+```html
+<button class="@apply hover:bg-blue-500">Hover me</button>
+```
+
+This will not apply the `bg-blue-500` class when hovering over the button because the `@apply` directive does not understand how to resolve the pseudo-selector.
+
+Another scenario is when using `@apply` with a class that uses responsive modifiers like `md:`. If the screen size doesn't match the specified breakpoint, then the styles won't be applied.
+
+```html
+<div class="@apply md:bg-red-500">Responsive div</div>
+```
