@@ -1,0 +1,11 @@
+The solution is to avoid using `@apply` with pseudo-selectors and responsive modifiers. Instead, apply the classes directly in the HTML.
+
+```html
+<button class="hover:bg-blue-500">Hover me</button>
+```
+
+```html
+<div class="md:bg-red-500">Responsive div</div>
+```
+
+This approach ensures that Tailwind CSS correctly handles the pseudo-selectors and responsive modifiers, resulting in the expected styling behavior.  The `@apply` directive is better suited for simpler class combinations without pseudo-selectors or responsive modifiers.
